@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stevit | Weather App</title>
+        <link id="favicon" rel="shortcut icon" href="" type="image/png" />
+        
+        <!-- Metadata-->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto|Satisfy" rel="stylesheet">
+        
+        <!-- jQuery -->
+        <script type="text/javascript" src="jquery.min.js"></script>
+        
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        
+        <!-- Moment JS -->
+        <script type="text/javascript" src="moment.min.js"></script>
+    
+        <!-- Weather Icons -->
+        <link rel="stylesheet" href="wi/css/weather-icons-wind.css" type="text/css" />
+        <link rel="stylesheet" href="wi/css/weather-icons.css" type="text/css" />
+        
+        <!-- Local Files -->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    
+    <body>
+        <div class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="https://marjanovicsteva.github.io/">
+                <img src="coffee.png" width="30" height="30" class="d-inline-block align-top" alt="" />
+                Stevit
+            </a>
+            
+            <span class="navbar-text">
+                Weather App&nbsp;&nbsp;&nbsp;
+                <div class="btn-group" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" id="celsius" autocomplete="off" checked />
+                        C
+                    </label>
+                    
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" id="fahrenheit" autocomplete="off" />
+                        F
+                    </label>
+                </div>
+            </span>
+        </div>
+        
+        <p>&nbsp;</p>
+        
+        <div class="container">
+            
+            
+            <div class="card text-center">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link tabBtn active" href="#">Main</a>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link tabBtn text-info" href="#">Aditional</a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="card-body">
+                <h4 id="card-title" class="card-title">Current Weather</h4>
+                
+                <p id="titleSpace">&nbsp;</p>
+                
+                <div id="mainInfo" class="row">
+                    <div class="col-lg-6">
+                        
+                        <i id="weatherIcon" class="wi"></i>
+                        
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div id="text-center" class="card-text lead text-left">
+                            <p><span id="city"></span><span id="country"></span></p>
+                            <p><span id="temperature"></span><span class="tempUnit"></span></p>
+                            <p id="description"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="additionalInfo" class="hide row">
+                    <div class="col-lg-12 text-center">
+                        <p>Max temperature: <span id="maxTemp"></span><span class="tempUnit"></span></p>
+                        <p>Min temperature: <span id="minTemp"></span><span class="tempUnit"></span></p>
+                        <p>Pressure: <span id="pressure"></span></p>
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind direction: <span id="windDirection"></span></p>
+                        <p>Wind speed: <span id="windSpeed"></span></p>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                
+                <p id="buttonSpace">&nbsp;</p>
+                
+                <a id="moreInfo" href="#" class="btn btn-info">More information</a>
+              </div>
+            </div>
+           
+        </div>
+        
+        <script type="text/javascript" src="script.js"></script>
+
+    </body>
+</html>
